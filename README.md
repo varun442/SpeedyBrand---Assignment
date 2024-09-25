@@ -37,7 +37,7 @@ To install and run this application locally, follow these steps:
 2. Clone the repository:
    ```
    git clone https://github.com/varun442/my-app.git
-   cd streamify-dashboard
+   cd my-app
    ```
 
 3. Install dependencies:
