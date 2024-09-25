@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Streamify Analytics Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+Streamify Analytics Dashboard is a frontend application that displays key metrics and data visualizations for a fictional music streaming service called "Streamify". The dashboard provides insights into user activity, revenue, and content performance, allowing the service's management team to make data-driven decisions.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. Key Metrics Display
+   - Total Users
+   - Active Users
+   - Total Streams
+   - Revenue
+   - Top Artist
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Data Visualizations
+   - User Growth Chart
+   - Revenue Distribution Chart
+   - Top 5 Streamed Songs Chart
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Interactive Streams Data Table
+   - Sortable columns
+   - Filtering by song name and artist
+   - Load-more functionality with infinite scrolling
 
-### `npm test`
+## Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Tailwind CSS for styling
+- Recharts for data visualization
 
-### `npm run build`
+## Installation and Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To install and run this application locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Clone the repository:
+   ```
+   git clone https://github.com/varun442/my-app.git
+   cd streamify-dashboard
+   ```
 
-### `npm run eject`
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your browser and navigate to `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application should now be running locally on your machine.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+  components/
+    KeyMetrics.js
+    UserGrowthChart.js
+    RevenueDistributionChart.js
+    TopStreamedSongsChart.js
+    StreamsDataTable.js
+    Navbar.js
+  context/
+    DashboardContext.js
+  data/
+    mockData.js
+  pages/
+    Dashboard.js
+  App.js
+  index.js
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Thought Process
 
-### Code Splitting
+1. Project Setup:
+   - Started by setting up a new React project with Create React App and configuring Tailwind CSS for styling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Component Development:
+   - Developed individual components for each section of the dashboard (KeyMetrics, Charts, DataTable).
+   - Each component was designed to be reusable.
 
-### Analyzing the Bundle Size
+3. State Management:
+   - Implemented a DashboardContext to manage and distribute data across components.
+   - This approach allows for easy data sharing without prop drilling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Data Visualization:
+   - Used Recharts library for creating interactive and responsive charts.
 
-### Making a Progressive Web App
+5. Streams Data Table:
+   - Initially, implemented a simple table with pagination.
+   - Later, eveolved it to use a custom infinite scroll implementation with a load-more functionality for better performance and user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+7. Performance Optimization:
+   - Also, implemented memoization techniques (useMemo) to optimize rendering performance, especially for data processing in the StreamsDataTable component.
 
-### Advanced Configuration
+## Trade-offs and Decisions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Mock Data 
+   - Used npm faker to generate fake data
 
-### Deployment
+2. Context API vs. Redux:
+   - Used React's Context API for state management due to its simplicity and sufficiency for this project's scope but for larger applications, Redux might offer more robust state management features.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Chart Library Choice:
+   - Chose Recharts for its ease of use and good integration with React.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Submission Guidelines
+
+This project has been submitted according to the following guidelines:
+
+1. Code Repository:
+   - The code is hosted on GitHub at: [https://github.com/varun442/my-app](https://github.com/varun442/my-app)
+
+2. Local Deployment:
+   - The application can be deployed locally using the following simple commands:
+     ```
+     npm install
+     npm start
+     ```
+   - These commands will install all necessary dependencies and start the development server.
