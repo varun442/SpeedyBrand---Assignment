@@ -125,3 +125,5 @@ This project has been submitted according to the following guidelines:
      npm start
      ```
    - These commands will install all necessary dependencies and start the development server.
+     3. Vercel Deployement:
+    - Find the deployement at: [https://speedy-brand-assignment-mu.vercel.app/](https://speedy-brand-assignment-mu.vercel.app/) 
