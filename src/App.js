@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { DashboardProvider } from './context/DashboardContext';
+import Dashboard from './pages/Dashboard';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DashboardProvider>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
+        <Navbar />
+        <main className="container mx-auto py-8 px-4 sm:px-6 lg:px-8"> {/* Added padding here */}
+          <Dashboard />
+        </main>
+      </div>
+    </DashboardProvider>
   );
 }
 
